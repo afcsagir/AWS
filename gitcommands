@@ -1,0 +1,46 @@
+https://www.howtoforge.com/tutorial/install-git-and-github-on-ubuntu-14.04/
+post_max_size in /etc/php5/apache2$ sudo nano php.ini is 64 M
+git init
+git status
+git add 
+git add. --add all
+git add -A
+git status
+git commit -m "whatever u like"
+
+then git push
+git remote add origin https://github.com/YourGithubUsername/RepositoryName.git
+
+
+to push the remote branch master for the repository origin
+ git push -u origin master 
+git add --all folder/
+
+
+Thats all may be
+    git init
+    git add ProjectFolderName
+    git commit -m "first commit"
+    git remote add origin https://github.com/YourGithubUsername/RepositoryName.git
+    git push -u origin master
+	
+	
+	
+	git config --global user.name "afc_sagir"
+	git config --global user.email "afc.sagir@gmail.com"
+	
+	
+	
+	
+	
+	
+git init Mytest
+gedit README
+gedit  sample.c
+git add README
+git add sample.c
+git commit -m "some_message"
+git push -u origin master
+
+
+
