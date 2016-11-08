@@ -1,0 +1,173 @@
+Install PHP 5.6
+
+sudo apt-get install python-software-properties
+sudo add-apt-repository ppa:ondrej/php
+sudo apt-get update
+sudo apt-get install -y php5.6 php5.6-mcrypt php5.6-gd
+
+Install Apache2
+
+sudo apt-get install apache2 libapache2-mod-php5
+
+Install MySQL
+
+sudo apt-get install mysql-server php5.6-mysql
+Install phpmyadmin
+sudo apt-get install phpmyadmin
+sudo ln -s /etc/phpmyadmin/apache.conf /etc/apache2/conf-available/phpmyadmin.conf
+sudo a2enconf phpmyadmin
+If got this phpMyAdmin Error: The mbstring extension is missing. Please check your PHP configuration
+
+sudo apt-get install php5.6-mbstring
+sudo apt-get install php-mbstring php5.6-mbstring
+sudo apt install php5.6-gettext
+
+sudo apt-get update
+/*
+fatal: could not create work tree dir 'laravel'.: Permission denied
+
+sudo chown -R sagir /var/www
+this doesnot work
+sudo LC_ALL=C.UTF-8 add-apt-repository ppa:ondrej/php 
+sudo apt-get update 
+sudo apt-get install php5.6
+sudo apt-get update*/
+this works
+sudo apt-get install php5.6-gd
+sudo apt-get install php5.6-intl
+sudo apt-get install php5.6-xsl
+curl -sS https://getcomposer.org/installer | php
+sudo mv composer.phar /usr/local/bin/composer
+sudo chmod +x /usr/local/bin/composer
+
+cd /var/www/html
+sudo composer create-project laravel/laravel your-project --prefer-dist
+
+sudo chgrp -R www-data /var/www/html/project
+sudo chmod -R 775 /var/www/html/project/storage
+
+cd /etc/apache2/sites-available
+sudo nano laravel.conf
+
+<VirtualHost *:80>
+    ServerName localhost
+
+    ServerAdmin webmaster@localhost
+    DocumentRoot /var/www/html/pms/public
+
+    <Directory /var/www/html/project>
+        AllowOverride All
+    </Directory>
+
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+
+
+
+
+sudo a2dissite 000-default.conf
+sudo a2ensite laravel.conf
+sudo a2enmod rewrite
+sudo service apache2 restart
+
+
+
+
+Inside laravel folder only artisan works
+sagir@sagir-PC:/var/www/html/your-project$ php artisan  --version
+
+
+php -v
+mysql --version
+apache2 -v
+
+
+
+
+https://www.howtoforge.com/tutorial/install-git-and-github-on-ubuntu-14.04/
+post_max_size in /etc/php5/apache2$ sudo nano php.ini is 64 M
+git init
+git status
+git add filename --for adding only one files
+git add. --add all
+git add -A
+git status
+git commit -m "whatever u like"
+
+then git push
+git remote add origin https://github.com/YourGithubUsername/RepositoryName.git
+
+
+to push the remote branch master for the repository origin
+ git push -u origin master 
+git add --all folder/
+
+
+Thats all may be
+    git init
+    git add ProjectFolderName
+    git commit -m "first commit"
+    git remote add origin https://github.com/YourGithubUsername/RepositoryName.git
+    git push -u origin master
+	
+	
+	
+	git config --global user.name "afc_sagir"
+	git config --global user.email "afc.sagir@gmail.com"
+	
+	
+	
+	
+	
+	
+git init Mytest
+gedit README
+gedit  sample.c
+git add README
+git add sample.c
+git commit -m "some_message"
+git push -u origin master
+
+Mysql Installation
+sudo apt-get install mysql-workbench
+
+Installing notepad++
+sudo apt-get update
+sudo apt-get install wine
+sudo apt-get install notepad++
+
+
+
+https://www.howtoforge.com/tutorial/install-laravel-on-ubuntu-for-apache/
+http://tecadmin.net/install-phpmyadmin-in-ubuntu/
+http://tecadmin.net/install-laravel-framework-on-ubuntu/#
+http://askubuntu.com/questions/755383/phpmyadmin-not-working-due-to-missing-extensions
+http://askubuntu.com/questions/58748/blank-page-when-trying-to-access-phpmyadmin
+http://stackoverflow.com/questions/20276895/could-not-create-work-tree-dir-example-com-permission-denied
+
+
+
+[mysqld]
+#
+# * Basic Settings
+#
+sql_mode=ONLY_FULL_GROUP_BY,ALLOW_INVALID_DATES,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION
+ sudo nano my.cnf
+Remote access
+http://toub.es/2012/06/10/using-your-local-phpmyadmin-connect-your-remote-1and1-mysql-database
+not bad --http://ubuntuguide.net/enable-remote-access-to-mysql-database-in-ubuntu-linux
+http://stackoverflow.com/questions/15663001/remote-connections-mysql-ubuntu
+
+https://wisdmlabs.com/blog/how-to-connect-to-a-remote-database-using-phpmyadmin/
+
+https://www.liquidweb.com/kb/how-to-install-and-configure-phpmyadmin-on-ubuntu-14-04/
+
+https://degreesofzero.com/article/manage-remote-mysql-servers-with-local-phpmyadmin.html
+http://sforsuresh.in/access-remote-mysql-server-using-local-phpmyadmin/
+
+https://www.devside.net/wamp-server/accessing-mysql-or-phpmyadmin-from-outside
+http://toub.es/2012/06/10/using-your-local-phpmyadmin-connect-your-remote-1and1-mysql-database
+
+https://www.devside.net/wamp-server/accessing-remote-databases-using-local-phpmyadmin
+
